@@ -1,16 +1,16 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const characterSchema = new Schema({
-	name: {
+const outfitSchema = new Schema({
+	category: {
 		type: String,
 		required: true,
 	},
-	face: {
+	image: {
 		type: String,
 		required: true,
 	},
 });
 
-const Character = mongoose.model("Character", characterSchema);
-module.exports = { Character };
+const Outfit = mongoose.model("Outfit", outfitSchema);
+module.exports = { Outfit };

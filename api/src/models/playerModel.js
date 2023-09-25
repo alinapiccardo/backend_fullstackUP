@@ -7,8 +7,12 @@ const playerSchema = new Schema({
 		required: true,
 	},
 	password: {
-		type: String,
+		type: Number,
 		required: true,
+	},
+	myCharacters: {
+		type: Array,
+		required: false,
 	},
 	isActive: {
 		type: Boolean,
@@ -17,4 +21,4 @@ const playerSchema = new Schema({
 });
 
 const Player = mongoose.model("Player", playerSchema);
-module.exports = Player;
+module.exports = { Player };
