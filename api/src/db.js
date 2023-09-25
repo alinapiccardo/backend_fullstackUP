@@ -6,6 +6,7 @@ const { Outfit } = require("../src/models/outfitModel");
 const { Player } = require("../src/models/playerModel");
 
 const uri = `mongodb+srv://${MONGO_URI}`;
+//MONGO_URI="piccardoalina:03069733@cluster0.dau2mfp.mongodb.net/characters?retryWrites=true&w=majority"
 
 const db = mongoose
 	.connect(uri, {
