@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const routes = require("./routes/index.js");
 const cors = require("cors");
 const session = require("express-session");
+const { SESSION_SECRET } = process.env;
 require("./db.js");
 
 const server = express();
@@ -12,7 +13,7 @@ server.use(cors());
 
 server.use(
 	session({
-		secret: "123456789",
+		secret: SESSION_SECRET,
 		resave: false,
 		saveUninitialized: true,
 	})
