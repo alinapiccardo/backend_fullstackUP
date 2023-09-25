@@ -16,29 +16,27 @@ Este repositorio remoto corresponde a la primera parte del TP integrador, que se
 
 ## Descripción del Juego
 
-Este emocionante proyecto es una aplicación web diseñada especialmente para un juego infantil, donde los niños pueden sumergirse en un mundo de creatividad y diversión. Aquí te presentamos los aspectos clave del proyecto:
+El proyecto consiste en una aplicación web diseñada especialmente para un juego infantil, donde los niños pueden sumergirse en un mundo de creatividad y diversión. Aspectos clave del proyecto:
 
 ### 🎮Descripción del Juego
 
-El juego infantil permite a los niños:
-
 1. **Autenticarse**: Los niños ingresan su nombre y un PIN numérico para iniciar sesión. El nombre se mostrará durante todo el juego.
 
-2. **Selección de Personajes**: Pueden elegir entre 4 personajes adorables, cada uno con su nombre y rostro único.
+2. **Selección de Personajes**: Pueden elegir entre 4 personajes, cada uno con su nombre y rostro único.
 
 3. **Construcción de Atuendos**: Los niños pueden armar atuendos diarios combinando partes superiores, partes inferiores y zapatos.
 
-4. **Visualización de Atuendos**: Pueden ver sus creaciones de atuendos completos y admirar su creatividad.
+4. **Visualización de Atuendos**: Pueden ver sus creaciones de atuendos completos.
 
-5. **Guardado de Resultados**: Los atuendos creados se almacenan en el sistema para su disfrute futuro.
+5. **Guardado de Resultados**: Los atuendos creados se almacenan en el sistema para poder verlos al ingresar nuevamente.
 
 6. **Recuperación de Resultados**: Si vuelven a jugar, los niños pueden acceder a los personajes y atuendos que crearon anteriormente.
 
-7. **Visualización Pública**: Además, el proyecto permite que cualquiera pueda ver los últimos 5 personajes creados, mostrando la creatividad de los niños al mundo.
+7. **Visualización Pública**: Además, el proyecto permite que se vean los últimos 5 personajes creados.
 
 ## ⚙️Configuración del Entorno
 
-Para configurar el entorno de desarrollo y ejecutar el proyecto, sigue estos pasos:
+Para configurar el entorno de desarrollo y ejecutar el proyecto, seguir estos pasos:
 
 1. **Clonar el Repositorio**:
 
