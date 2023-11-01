@@ -10,6 +10,11 @@ const characterSchema = new Schema({
 		type: String,
 		required: true,
 	},
+	outfit: {
+		type: mongoose.Schema.Types.Mixed,
+		ref: "Outfit",
+		required: false,
+	},
 });
 
 const Character = mongoose.model("Character", characterSchema);
