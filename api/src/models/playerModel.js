@@ -16,7 +16,6 @@ const playerSchema = new Schema({
 	},
 	isActive: {
 		type: Boolean,
-		required: true,
 	},
 });
 
