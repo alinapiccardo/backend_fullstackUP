@@ -2,23 +2,11 @@ const { Player } = require("../db");
 
 const getUsersHandler = async (req, res) => {
 	try {
-		const { username } = req.params;
-		let users;
-
-		if (username) {
-			users = await Player.findOne({ username });
-		} else {
-			users = await Player.find();
-		}
-
-		if (!users) {
-			res.status(404).json({ error: "User not found" });
-			return;
-		}
-
-		return res.status(200).json(users);
-	} catch (error) {
-		return res.status(500).json({ error: error.message });
+		let users = await Player.find({});
+		res.status(200).json(users);
+	} catch (err) {
+		console.log(err);
+		res.sendStatus(500);
 	}
 };
 

@@ -11,7 +11,7 @@ const authenticator = async (req, res) => {
 		if (player) {
 			const token = crypto.randomBytes(32).toString("hex");
 			req.session.token = token;
-			res.status(200).json({ message: "Autenticación exitosa" });
+			res.status(200).json(player);
 		} else {
 			res.status(401).json({ error: "Credenciales incorrectas" });
 		}
