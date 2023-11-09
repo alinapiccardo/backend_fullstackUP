@@ -12,6 +12,7 @@ const authenticator = async (req, res) => {
 			const token = crypto.randomBytes(32).toString("hex");
 			req.session.token = token;
 			res.status(200).json(player);
+			console.log("player", player);
 		} else {
 			res.status(401).json({ error: "Credenciales incorrectas" });
 		}
