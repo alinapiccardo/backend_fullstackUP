@@ -28,4 +28,7 @@ const createUser = async (req, res) => {
 	}
 };
 
+//update user sent with new data in myCharacters property
+
+
 module.exports = { getUsersHandler, createUser };

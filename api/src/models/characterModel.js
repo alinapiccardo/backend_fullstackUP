@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const characterSchema = new Schema({
 	name: {
 		type: String,
-		required: true,
+		// required: true,
 	},
 	face: {
 		type: String,
-		required: true,
+		// required: true,
 	},
 	outfit: {
 		type: mongoose.Schema.Types.Mixed,
