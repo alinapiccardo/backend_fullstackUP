@@ -1,4 +1,4 @@
-const { Character } = require("../db");
+const { Character, Player } = require("../db");
 
 const getCharactersHandler = async (req, res) => {
 	try {
@@ -16,13 +16,37 @@ const getCharactersHandler = async (req, res) => {
 		res.status(500).json({ error: error.message });
 	}
 };
+
 const addOutfitToCharacter = async (req, res) => {
-	updatedCharacter = req.body;
+	const updatedCharacter = req.body;
+	const { user } = req.body;
+	console.log(updatedCharacter);
+
 	try {
-		charId = updatedCharacter._id;
-		const newOutfit = await Character.findByIdAndUpdate(charId, {
-			$push: { outfit: updatedCharacter.outfit },
-		});
+		const charId = updatedCharacter._id;
+
+		const newOutfit = await Character.findByIdAndUpdate(
+			charId,
+			{ $push: { outfit: updatedCharacter.outfit } },
+			{ new: true }
+		);
+
+		const player = await Player.findByIdAndUpdate(
+			user._id,
+			{
+				$push: {
+					myCharacters: {
+						_id: updatedCharacter._id,
+						name: updatedCharacter.name,
+						face: updatedCharacter.face,
+						outfit: updatedCharacter.outfit,
+					},
+				},
+			},
+			{ new: true }
+		);
+
+		console.log(`Added ${newOutfit.name} to ${player.username}'s saved Chars`);
 		res.status(201).json(newOutfit);
 	} catch (err) {
 		res.status(400).send(err);
